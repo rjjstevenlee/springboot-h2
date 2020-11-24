@@ -1,0 +1,403 @@
+1.Serializable,Repeatable read,read committed etc.are all types of:__D__
+
+A. Logs  B.Latch types  C.Locks  D.Isolation level
+
+2._D_defines the schema of each database hosted the DBMS [定义托管(hosted)DBMS的每个数据库的架构(schema)]
+
+A.UML  B.Database model  C.ER diagram  D.Both B and C above
+
+3.A Rollback statement will also release any existing save points that may be in use._A_ [Rollback语句还将释放可能正在使用的所有现有存储点]
+
+A. True B.false
+
+4. An audit trail is__B__    [审计跟踪是]
+
+A.used to make back up copies.  B.The recorded history of operations performed on a file   [A.用于制作备份副本 B.对文件执行的操作的记录历史 C.用于恢复丢失的信息 D.None of the above ]
+C.Be used to restore lost information  D.None of the above
+
+5.Advantages of normalizing database are:__ABCD__ 				[normalizing(标准化)  规范化数据库的优点是]
+
+A.No duplicate entries  B.Saves storage space
+C.Boasts the query performances D.Boasts the insert performances     [A.无重复条目 B.节省存储空间 C.拥有查询性能  entries(进入(指行动);进入(指权利等);参与，加入(指权利、机会)) performance(性能)]
+
+6.Which of the following sorting methods would be most suitable form sorting a list  which is  always sorted? 【以下哪种排序方法最适合对始终排序的列表进行排序】
+
+A.Bubble Sort  B.Insection Sort  C.Selection Sort  D.Quick Sort
+
+7.Which of the following traversals is sufficient construct BST from given traversals:【下面哪一个遍历足够从给定的遍历构造BST】
+
+A. Any one of inorder,preorder and postorder is sufficient
+B.Ether preorder or postorder is sufficient
+C.Preorder and postorder
+D.Inorder and postorder
+
+8.Which of the following points is/are true about Linked List data structure when it is compared with array?【当链表数据结构与数组比较时，下列哪一点是正确的】
+
+A.Arrays have better cache locality that can make them better in terms of performance;【数组具有更好的缓存位置，可以使它们在性能方面更好】
+B.it is easy to insert and delete elements in Linkd List. 【在Linkd列表中插入和删除元素很容易】
+C.Random access is not allowed in a typical implementation of Linked Lists;【在链表的典型实现中不允许随机访问】
+D.The size of array has to be pre-decided. linked lists can change theire size any time. 【数组的大小必须预先决定。链接列表可以随时更改其大小】
+
+9.Which of the following is/are Creational pattern(s) in OO design?
+
+A.Factory pattern B.Singleton pattern C.Composite pattern  D.Prototype pattern
+
+10.Which of the following are True statement?
+
+A.Java allows operator overloading. B.Java code compiled on Windows can run on Linux;
+C.Java has pointers to specific locations is memoery  D.Java is a procedural language
+
+11.The class java.lang.Exception is
+
+A.Protected B.Extends Throwable  C.Implements Throwable  D.Serializable
+
+12.parseInt() and parseLong() method throws ___
+
+A.ArithmeticException   B.ClassNotFoundException
+C.NullPointerException  D.NumberFormatException
+
+13.Which of the following is True for Vector class?
+
+A.The size of a Vector is static
+B.The Vector class implements an incremental array  of objects.
+C.The Vector components can be accessed using an integer index.
+D.The size of a Vector increases or decreases as needed to accommendate the items.
+
+14.Using which technigue can users sort a group by normal order of its elements in Java?
+
+A.Sort sort  B.CollectionsUtils.sortCollection
+C.Collection.sort  D.Collections.sort
+
+
+15.Choose the correct statement(s):
+
+A.Threads do not share a common memoery.
+B.Processes cooperate by the OS defined intermediate API.
+C.Thread getState() can return state  New,Runnable,Blocked,Terminated
+D.Exceptions are allowed to be thrown in Runnable'is run method
+E.When alll non-daemon threads are terminated, the JVM abandons all remainning daemon  threads.
+
+16.Which of the following operations are atomic?
+
+A.writing to a non-valatile int
+B.writing to a valatile int
+C.writing to a non-valatile long
+C.writing to a valatile long
+C.incrementing a valatile long
+
+17.For below codes choose the correct statement(s):
+
+class NamePrinter implements Runnable {
+
+	String name;
+	NamePrinter(String name){
+
+		this.name = name;
+	}
+
+	public void run(){
+
+		Test.print(name);
+
+	}
+
+	public class Test{
+
+		public static void print(String name){
+			System.out.print(name);
+			System.out.print(name);
+		}
+
+
+		public static void main(String[] args){
+
+			new Thread(new NamePrinter("Ericsson")).start();
+			new Thread(new NamePrinter("Sweden")).start();
+
+		}
+
+	}
+
+
+}
+A. as it is , a possible output is EricssonEricssonSwedenSweden.
+B. as it is , a possible output is SwedenEricssonEricssonSweden.
+C. by synchronized print(),a possible output is EricssonSwedenEricssonEricsson.
+D. by synchronized print(),a possible output is SwedenSwedenEricssonEricsson.
+E. by synchronized print(),a possible output is SwedenEricssonSwedenEricsson.
+
+18.What are the available implementation of ExcecutoService in standard library?
+
+A.Excecutor  B.ThreadPoolExcecutor  C.ScheduledThreadPoolExcecutor  D.ForkJoinPool
+
+19.For below codes choose the correct statement(s).
+
+int count = 0;
+
+void increment(){
+	count = count + 1;
+}
+
+ExcecutoService  executor = Excecutors.newFixedThreadPool(2);
+
+IntStream.range(0,1000)
+	.forEach(i -> executor.submit(this::increment));
+
+stop(executor);
+
+System.out.println(count);
+
+A. A possible output is 998.
+B. A possible output is 1000.
+C. A possible output is 1001.
+D. By synchronized increment(),a possible output is 999.
+E. By synchronized increment(),a possible output is 1000.
+F. Add volatile to variable count,the output is 1000
+G. Change variable count to AtomicInteger,the output is 1000.
+
+
+20.suppose whe have a class named Exam,Which of the following statments are True ?
+
+1. package com.ericssion.exam;
+2.
+3. public class Exam{
+4.	  public static void main(String[] args){
+5.          Exam one = new Exam();
+6.			Exam two = new Exam();
+7.			Exam three = one;
+8.			one = null;
+9.			Exam four = one;
+10.			three = null;
+11.			two = null;
+12.			two = new Exam();
+13.			System.gc();
+14.   }
+15.}
+
+A. The Exam object from line 5 is first eligible for garbage collection immediately following line 8.
+B. The Exam object from line 5 is first eligible for garbage collection immediately following line 10.
+C. The Exam object from line 5 is first eligible for garbage collection immediately following line 14.
+D. The Exam object from line 6 is first eligible for garbage collection immediately following line 11.
+E. The Exam object from line 6 is first eligible for garbage collection immediately following line 13.
+F. The Exam object from line 6 is first eligible for garbage collection immediately following line 14.
+
+21.What is an immutable object?
+
+A.An immutable object can be change once it is created.
+B.An immutable object can't be change once it is created.
+C.An immutable object is an instance of an abstract class.
+D.None of the above.
+
+22.What is a transient variable?
+
+A. A transient variable is a variable which is serialized during Serialization.
+B. A transient variable is a variable that may not be serialized during Serialization.
+C. A transient variable is a variable which is to be marked as serialized.
+C. None of above.
+
+23. What is true about a final class ?
+
+A.The class declared final a final class;
+B.Final classes are created so the methods implemented by that class cannot be overridden;
+C.It can't be inherited.
+D.The values of properties of the final class instance cann't be changed.
+
+24.Which of the following correctly mentions the Autowire types?
+
+A.byName,byType,constructor and autocorrect.
+B.byName,byType,constructor and autodetect.
+C.byName,byType,destructor and autodetect.
+D.byName,byMethod,destructor and autodetect.
+E.None of these.
+
+25.What are the key elements of a test plain and test cases?
+
+A.Testing objecttives.
+B.Testing scope.
+C.The criteria for entrance and exit.
+D.Deliverables.
+
+26.Choose the correct statement(s)?
+
+A.String a = "hello",b="hello"; a==b return true;
+B.You can create class MyString by extending java.lang.String;
+C.abstract and static cannot be used in same method;
+D.boostrap loads the package jre/lib/rt.jar
+
+27.Choose the correct statement(s)
+
+	try{
+
+		System.out.println("A");
+		throw new RuntimeException();
+
+	}catch(Exception e){
+
+		System.out.println("C");
+
+	}finally{
+
+		System.out.println("D");
+	}
+
+A.Output has ABCD.
+B.Output has ACD.
+C.Output has exception stack trace.
+D.Compile error.
+
+28.Choose the corrct statement(s):
+
+A.Integer i = new Integer(42); i.equals(42); return true;
+B.Double d = new Integer(42.0); d.equals(42.0); return true;
+C.Float f = new Float(42); f.equals(42.0); return true;
+D.Byte b = 42; b.equals(42); return false;
+E.Character c = 42; c.equals(42); return true;
+
+29.Given the following classloader hierarchy and assumed no other class is loaded by all classloaders choose the correct statement(s).
+
+						CL Grandfather
+
+							parent
+
+				CL Father 			CL Uncle
+				log4j.Logger		 log4j.Logger
+
+			     parent 				parent
+
+
+				CL Son 					CL Cousin
+
+A.CLSon.loadClass("log4j.Logger").equals(CLCousin.loadClass("log4j.Logger")) return false;
+B.CLFather will be asked to load class when CLSon.loadClass("log4j.Logger") is invoked.
+C.CLFather will be asked to load class when CLSon.loadClass("notexisting") is invoked.
+D.CLGrandFather will be asked to load class when CLSon.loadClass("java.lang.String") is invoked.
+
+30. Choose the correct statement(s):
+
+A.To serialize a class we can implement java.io.serializable.
+B.To serialize a class we can implement java.io.Externalizable.
+C.tansient variable will not be serialized.
+D.final variables will not be serialized.
+E.static variables will not be serialized.
+
+31.Choose the correct  statement(s) about Reflection:
+
+A. In runtime to identify the class of any given object.
+B. In runtime to identify the member variable and methods of any given class
+C. In runtime to invoked a member method of an object by name.
+D. In runtime to create an object instance by class name.
+E. In runtime to change value of an Object's field by name.
+
+
+32.When an object is created and initialized ,choose the correct statement(s):
+
+A.Static fields are initialized before non-static fields
+B.Its static fields are initialized before its parent's static fields.
+C.Static fields are initialized before constructor is called.
+D.Its parent's constructor is called before its constructor is called.
+
+33.Choose the correct statment(s):
+
+A. A clas can only extend only one class.
+B. A clas can implement more than one interface.
+C. An interface can extend more than one interface.
+D. I can new an object  from an interface.
+E. I cannot new an object from an abstract class
+
+34.To obtain a thread dump,which command(s) or tool(s) can you use :
+
+A.jstack  B.jmap  C.kill   D.jconsole  E.jstat
+
+35.Which features below are NOT introduced by Java 8:
+
+A.Java Stream API   B.Lambda Expressions
+C.Annotation 	D.Default and static methods in interfaces.
+E.Static import
+
+36.About NIO choose correct statement(s):
+
+A.NIO works with buffers.
+B.NIO is non-blocking IO.
+C.DatagramChannel is for UDP.
+D.Channels can be read and Written asynchronously
+
+37.Which protocols below are in application layer?
+
+A.HTTP  B.FTP   C.ICMP    D.SMTP   E.TCP   F.LDAP
+
+
+38.About TLS(SSL) choose the correct statement(s):
+
+A.TLS be used to authenticate server and client.
+B.TLS can be used to encrypt the communicaation.
+C.TLS can be used to ensure data integrity
+D.TLS is a protocol in application layer
+
+39.About Restful choose the correct statement(s):
+
+A.Restful can only run on HTTP.
+B.HTTP method POST is used to create  a new  resource.
+C.HTTP method PUT is used to replace a resource.
+D.No Restful semantic is defined for HTTP method PATCH.
+E.Restful can use XML as payload.
+
+40.About HTTP choose the correct statement(s):
+
+A.HTTP is stateful
+B.Status code 4xx indicates server errro.
+C.Status code 2xx indicates success.
+D.HTTP Keep-alive uses a single TCP connection for multiple requests and responses.
+
+41.What command(s) can be used to get the running processes information on Linux.
+
+A.ps      B.top   C.netstat   D.jps
+
+
+42.File "test" contains 10 lines of text.To extract the 6th,7th,and 8th lines from file "text" to ,,,,
+"test1" on Unix/Linux system.Which command can do that?
+
+A.head -8 test | tail -3 > test1
+B.head -3 test | tail -8 > test1
+C.tail -5 test | head -3 >> test1
+D.tail -3 test | head -5 >> test1
+
+43.About links on Linux ,choose the correct statement(s):
+
+A.Linux has 2 types of links,symbolic(soft) link and hard link.
+B.The actual file will be delected when the symbolic link is deleted.
+C.A hard link can link to a folder.
+D.The actual file will be deleted when the hard link is deleted.
+
+44.About Spring Framework,choose the correct statement(s):
+
+A.Spring has own AOP framework that modularized cross0-cutting concerns in aspects.
+B.Central to the Spring is ites IoC container.
+C.Spring MVC is part of Spring Boot.
+D.Spring can only use XML to configure the IoC container.
+
+45. About Hibernate,choose the correct statement(s):
+
+A.Only HQL can be used to issue a query to the database in Hibernate.
+B.Hibernate is an implementation of JPA (Java Persistence API).
+C.A Hibernate persistent class must have a no-argument constructor.
+D.A Hibernate persistent class must be serializable.
+
+46.What are the redirect options to use for sending both standard output and standard error to the same location?
+
+A.&>     B.1>&2   C.2&>  D.2>$1
+
+47.How to debug a shell script?
+
+A.sh -d test.sh  B. sh -nv test.sh  C.sh -x test.sh  D.None
+
+48.How would you continously display memory usage ervery 5 seconds?
+
+A.free -s 5  B. top -m 5  C.du -m 5   D.mem -< 5
+
+49.What are difference ways  to copy  files from one machine to other?
+
+A.FTP   B.SCP   C.SSH  D.XCOPY
+
+50.What is the command  to start  a job  that will keep on running even after closing the session?
+
+A.hup command   B.nohup command  C.jobc command  D.hup.ouot command
